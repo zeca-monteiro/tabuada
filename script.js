@@ -1,13 +1,14 @@
-function Calcular(){
-    let i = document.querySelector('input#txti')
-    if (i.value.length == 0){
-        alert('Digite um número para começar!')
+function tabuada(){
+    let num = document.getElementById('txtn')
+    if (num.value.length == 0){
+        alert('Insira um número!')
     } else {
-        let ni = Number(i.value)
-        for (cont = 1; cont <= 10; cont ++) {
+        let n = Number(num.value)
+        caixa.innerHTML = ''
+        for (c = 1; c <= 10; c++){
             let item = document.createElement('option')
-            item.text = `${ni} X ${cont} = ${ni*cont}`
-            lista.appendChild(item)
+            item.text = `${n} X ${c} = ${n*c}`
+            caixa.appendChild(item)
         }
     }
 }
